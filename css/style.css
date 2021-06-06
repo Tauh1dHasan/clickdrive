@@ -421,7 +421,7 @@ body {
   position: relative;
   font: 14px/1.7 "Lora", "Cairo", sans-serif;
   background: #fff;
-  color: #999; }
+   }
   body.boxed {
     background: #eee; }
     body.boxed #full-container,
