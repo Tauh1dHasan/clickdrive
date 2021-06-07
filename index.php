@@ -5,12 +5,14 @@
 
 	$message = '';
 	if (isset($_POST['submit'])) {
-		
+		date_default_timezone_set("Europe/Amsterdam");
+		$date_time = date("jS F Y");
+
 		$name = mysqli_escape_string($conn, $_POST['name']);
 		$email = mysqli_escape_string($conn, $_POST['email']);
 		$phone = mysqli_escape_string($conn, $_POST['phone']);
 
-		$sql = "INSERT INTO leads (name, email, phone, status) VALUES ('$name', '$email', '$phone', 'new')";
+		$sql = "INSERT INTO leads (name, email, phone, date_time, status) VALUES ('$name', '$email', '$phone', '$date_time', 'new')";
 		$run_sql = mysqli_query($conn, $sql);
 
 		if ($run_sql) {
@@ -73,7 +75,7 @@
 
 
 									<img class="logo-banner" src="images/logoWhite.svg" alt="clickdrive logo" style="width: 130px;">
-									<h1 style="font-size: 3.5em">Get your Dutch driving license</h1>
+									<h1 style="font-size: 3.5em">Get your <span style="color: #1af28f; font-weight: 600; font-size: 1.2em;">Dutch</span> driving license</h1>
 									<div class="description">
 										Get free call from us
 										<br>

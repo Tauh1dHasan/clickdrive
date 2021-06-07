@@ -1,0 +1,24 @@
+#### Follow this documentation to install the system properly ####
+
+1. Create a subdomain.
+2. Create a database user. <--- copy the user name and password --->
+3. Create a new database. <--- copy the database name --->
+4. Connect newly created database User to new Database. Give all access privilege.
+5. Unzip the clickdrive.zip file.
+6. Import database.sql file to your newly created Database.
+7. Open admin folder -> inc folder -> Open db.php file with any text editor.
+8. Follow the instruction given on that file.
+9. Upload the entire files into your subdomain public folder.
+10. And you are done. :) 
+
+#### Load the website at your subdomain url ####
+
+
+####  Admin panel ####
+
+1. load the admin panel at your 'subdomain/admin' 
+2. Initial access email => clickadmin@mail.com 
+3. Initial access password => 12345
+4. Once you are inside the Dashboard you can change the email and password on 'subdomain/profile.php'
+
+#### Thank you ####

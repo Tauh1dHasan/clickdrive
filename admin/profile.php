@@ -4,6 +4,23 @@
 
 <?php
   require "inc/head.php";
+
+  // Processing Profile update form data
+  if (isset($_POST['update'])) {
+    $name = mysqli_escape_string($conn, $_POST['name']);
+    $email = mysqli_escape_string($conn, $_POST['email']);
+    $password = mysqli_escape_string($conn, $_POST['password']);
+
+    $sql = "UPDATE user SET name = '$name', email = '$email', password = '$password' WHERE id = 1 ";
+    $run_sql = mysqli_query($conn, $sql);
+
+    if ($run_sql) {
+      echo "<script> location = 'profile.php' </script>";
+    }else{
+      echo "<script> location = 'profile.php' </script>";
+    }
+
+  }
 ?> 
 
 <body id="page-top">
@@ -31,53 +48,42 @@
           <!-- DataTales Example -->
           <div class="card shadow mb-4">
             <div class="card-header py-3">
-              <h6 class="m-0 font-weight-bold text-primary">See all new requests</h6>
+              <h6 class="m-0 font-weight-bold text-primary">Update Admin Profile</h6>
             </div>
             <div class="card-body">
               <div class="table-responsive">
 
-                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                <form action="profile.php" method="POST">
 
-                  <thead>
-                    <tr>
-                      <th>Name</th>
-                      <th>Email</th>
-                      <th>Phone</th>
-                      <th>Date</th>
-                      <th>Mark as</th>
-                    </tr>
-                  </thead>
+                  <!-- getting user ingo from database -->
+          <?php  
+            $infoSql = "SELECT * FROM user WHERE id = 1";
+            $infoSqlRun = mysqli_query($conn, $infoSql);
 
-                  <tfoot>
-                    <tr>
-                      <th>Name</th>
-                      <th>Email</th>
-                      <th>Phone</th>
-                      <th>Date</th>
-                      <th>Mark as</th>
-                    </tr>
-                  </tfoot>
+            $data = mysqli_fetch_assoc($infoSqlRun);
+          ?>
 
-                  <tbody>
-    <?php  
-      $sql = "SELECT * FROM leads WHERE status = 'new' ";
-      $run_sql = mysqli_query($conn, $sql);
-      while ($row = mysqli_fetch_assoc($run_sql)) {
-    ?>
-                    <tr>
-                      <td><?= $row['name'] ?></td>
-                      <td><?= $row['email'] ?></td>
-                      <td><?= $row['phone'] ?></td>
-                      <td><?= $row['date_time'] ?></td>
-                      <td>
-                        <a class="btn btn-danger" href="mark_read.php?id=<?= $row['id'] ?>">Old</a>
-                      </td>
-                    </tr>
 
-    <?php } ?>
-                    
-                  </tbody>
-                </table>
+                  <div class="form-group">
+                    <label for="name">Admin Name</label>
+                    <input name="name" type="text" class="form-control" value="<?= $data['name'] ?>" required>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="email">Email address</label>
+                    <input name="email" type="email" class="form-control" id="email" value="<?= $data['email'] ?>" required>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="password">Password</label>
+                    <input name="password" type="password" class="form-control" id="password" value="<?= $data['password'] ?>" required>
+                  </div>
+
+                  <button name="update" type="submit" class="btn btn-primary">Update</button>
+                </form>
+
+
+
               </div>
             </div>
           </div>

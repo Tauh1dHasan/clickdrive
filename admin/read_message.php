@@ -43,6 +43,7 @@
                       <th>Name</th>
                       <th>Email</th>
                       <th>Phone</th>
+                      <th>Date</th>
                       <th>Action</th>
                     </tr>
                   </thead>
@@ -52,6 +53,7 @@
                       <th>Name</th>
                       <th>Email</th>
                       <th>Phone</th>
+                      <th>Date</th>
                       <th>Action</th>
                     </tr>
                   </tfoot>
@@ -66,6 +68,7 @@
                       <td><?= $row['name'] ?></td>
                       <td><?= $row['email'] ?></td>
                       <td><?= $row['phone'] ?></td>
+                      <td><?= $row['date_time'] ?></td>
                       <td>
                         <a class="btn btn-danger" href="delete.php?id=<?= $row['id'] ?>">Delete</a>
                       </td>
@@ -89,7 +92,7 @@
      <footer class="sticky-footer bg-white">
         <div class="container my-auto">
           <div class="copyright text-center my-auto">
-            <span>Developed with love by <a target="_blank" href="https://www.softlooper.com/">Softlooper</a></span>
+            <span>Developed with love by <a href="https://github.com/Tauh1dHasan/" target="_blank">Tauhid Hasan</a></span>
           </div>
         </div>
       </footer>
