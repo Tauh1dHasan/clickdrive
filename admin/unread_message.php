@@ -41,7 +41,6 @@
                   <thead>
                     <tr>
                       <th>Name</th>
-                      <th>Email</th>
                       <th>Phone</th>
                       <th>Date</th>
                       <th>Mark as</th>
@@ -51,7 +50,6 @@
                   <tfoot>
                     <tr>
                       <th>Name</th>
-                      <th>Email</th>
                       <th>Phone</th>
                       <th>Date</th>
                       <th>Mark as</th>
@@ -66,7 +64,6 @@
     ?>
                     <tr>
                       <td><?= $row['name'] ?></td>
-                      <td><?= $row['email'] ?></td>
                       <td><?= $row['phone'] ?></td>
                       <td><?= $row['date_time'] ?></td>
                       <td>

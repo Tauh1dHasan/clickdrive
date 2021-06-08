@@ -9,10 +9,9 @@
 		$date_time = date("jS F Y");
 
 		$name = mysqli_escape_string($conn, $_POST['name']);
-		$email = mysqli_escape_string($conn, $_POST['email']);
 		$phone = mysqli_escape_string($conn, $_POST['phone']);
 
-		$sql = "INSERT INTO leads (name, email, phone, date_time, status) VALUES ('$name', '$email', '$phone', '$date_time', 'new')";
+		$sql = "INSERT INTO leads (name, phone, date_time, status) VALUES ('$name', '$phone', '$date_time', 'new')";
 		$run_sql = mysqli_query($conn, $sql);
 
 		if ($run_sql) {
@@ -41,7 +40,6 @@
 	<link href="css/css-assets.css" rel="stylesheet">
 	<link href="css/style.css" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Montserrat:500,500i,600,600i" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i" rel="stylesheet">
 
 	<!-- Favicon
 	============================================= -->
@@ -75,11 +73,10 @@
 
 
 									<img class="logo-banner" src="images/logoWhite.svg" alt="clickdrive logo" style="width: 130px;">
-									<h1 style="font-size: 3.5em">Get your <span style="color: #1af28f; font-weight: 600; font-size: 1.2em;">Dutch</span> driving license</h1>
+									<h1 style="font-size: 3.3em">Get your <span><img src="images/BG_less_dutch.png" style="display: inline;"></span> Driver's license</h1>
 									<div class="description">
-										Get free call from us
-										<br>
-										Just drop your name and phone number
+										<h3 style="font-weight: 500;">Please leave your phone number and we will call you back</h3>
+										
 									</div>
 									<div class="cta-subscribe cta-subscribe-3 box-form">
 										<i class="cs-arrow fa fa-angle-down"></i>
@@ -90,15 +87,15 @@
 												<div class="cs-notifications">
 													<div class="cs-notifications-content"></div>
 												</div><!-- .cs-notifications end -->
+
 												<div class="form-group">
 													<input type="text" name="name" id="cs2Name" class="form-control" placeholder="Your Name" required>
 												</div><!-- .form-group end -->
-												<div class="form-group">
-													<input type="email" name="email" id="cs2Email" class="form-control" placeholder="Your Email">
-												</div><!-- .form-group end -->
+												
 												<div class="form-group">
 													<input type="number" name="phone" id="cs2PhoneNum" class="form-control" placeholder="Phone Number" required>
 												</div><!-- .form-group end -->
+
 												<div class="form-group">
 													<input type="submit" name="submit" class="form-control" value="Send Request">
 												</div><!-- .form-group end -->
@@ -133,8 +130,9 @@
 
 
 
+								<h3 style="padding-top: 20px; font-weight: 500;">Have your license within the mandatory 6 months</h3>
+								</div><!-- .banner-center-box end -->
 
-								</div><!-- .banner-center-box end -->							
 							</div><!-- .col-md-12 end -->
 						</div><!-- .row end -->
 					</div><!-- .container end -->
@@ -190,7 +188,7 @@
 									<div class="box-info mb-md-50">
 										<div class="box-icon icon x2 colorful-icon mr-20"><i class="fa fa-check-circle"></i></div>
 										<div class="box-content">
-											<h4>Arrange your throry exam</h4>
+											<h4>Plan your throry exam</h4>
 											
 										</div><!-- .box-content end -->
 									</div><!-- .box-info end -->
@@ -224,7 +222,7 @@
 									<div class="box-info">
 										<div class="box-icon icon x2 colorful-icon mr-20"><i class="fa fa-commenting-o"></i></div>
 										<div class="box-content">
-											<h4>24/7 Support with all of your questions</h4>
+											<h4>24/7 Support for all your questions</h4>
 											
 										</div><!-- .box-content end -->
 									</div><!-- .box-info end -->										
@@ -255,7 +253,19 @@
 
 									<div class="box-center">
 										<div class="video-preview">
+											<p style="position: absolute; 
+												z-index: 333; 
+												padding-left: 30%; 
+												padding-top: 80%;">
+
+												<span style="padding: 0 25% 0 25%; 
+												    border-radius: 40%; 
+													background: #0274F5; 
+													color: white; 
+													font-size: 1.5em;">Barbara</span>
+											</p>
 											<img class="img-fluid" src="images/Barbara.png" alt="Barbara">
+
 										</div><!-- .video-preview end -->										
 									</div><!-- .box-center end -->
 
@@ -265,6 +275,17 @@
 
 									<div class="box-center">
 										<div class="video-preview">
+											<p style="position: absolute; 
+												z-index: 333; 
+												padding-left: 35%; 
+												padding-top: 80%;">
+
+												<span style="padding: 0 25% 0 25%; 
+												    border-radius: 40%; 
+													background: #0274F5; 
+													color: white; 
+													font-size: 1.5em;">Joost</span>
+											</p>
 											<img class="img-fluid" src="images/Joost_profile.png" alt="">
 										</div><!-- .video-preview end -->										
 									</div><!-- .box-center end -->
@@ -275,6 +296,17 @@
 
 									<div class="box-center">
 										<div class="video-preview">
+											<p style="position: absolute; 
+												z-index: 333; 
+												padding-left: 40%; 
+												padding-top: 80%;">
+
+												<span style="padding: 0 25% 0 25%; 
+												    border-radius: 40%; 
+													background: #0274F5; 
+													color: white; 
+													font-size: 1.5em;">Bart</span>
+											</p>
 											<img class="img-fluid" src="images/Bart_profile.png" alt="">
 										</div><!-- .video-preview end -->										
 									</div><!-- .box-center end -->
@@ -299,18 +331,32 @@
 							<div class="row">
 								<div class="col-md-8 col-md-offset-2 text-center">
 
-									<h1>Direct contact</h1>
-									<p style="font-size: 1.5em;"><i class="fa fa-map-marker" style="color: #425cbb;"></i> Goudsesingel 136,  3011KD Rotterdam</p>
-									<p style="font-size: 1.5em;"><i class="fa fa-mobile" style="color: #425cbb;"></i> 085-8085123</p>
-									<p style="font-size: 1.5em;"><i class="fa fa-envelope" style="color: #425cbb;"></i> info@clickdrive.nl</p>
+									<h1>Contact</h1>
+									
+									<h3 style="font-weight: 600;">
+										<i class="fa fa-map-marker" style="color: #425cbb;"></i> 
+										Goudsesingel 136,  3011KD Rotterdam
+									</h3>
 
-									<h3>Get the app</h3>
+									<h3 style="font-weight: 600;">
+										<i class="fa fa-mobile" style="color: #425cbb;"></i> 
+										085-8085123
+									</h3>
+
+									<h3 style="font-weight: 600;">
+										<i class="fa fa-envelope" style="color: #425cbb;"></i> 
+										info@clickdrive.nl
+									</h3>
+
+									<h1 style="padding-top: 25px;">Get the app</h1>
+									
 									<a href="https://play.google.com/store/apps/details?id=com.cloudprimero.clickdrive&hl=nl">
-										<i class="fa fa-android" style="color: #425cbb; font-size: 3em; margin-right: 15px;"></i>
+										<img src="images/googlePlay.png">
+										
 									</a>
 									
 									<a href="https://apps.apple.com/nl/app/clickdrive/id1525796033">
-										<i class="fa fa-apple" style="color: #425cbb; font-size: 3em;"></i>	
+										<img src="images/AppStore.png">
 									</a>
 									
 

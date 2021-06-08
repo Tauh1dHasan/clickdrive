@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 07, 2021 at 07:30 PM
+-- Generation Time: Jun 08, 2021 at 09:06 PM
 -- Server version: 10.4.13-MariaDB
 -- PHP Version: 7.4.7
 
@@ -30,7 +30,6 @@ SET time_zone = "+00:00";
 CREATE TABLE `leads` (
   `id` int(11) NOT NULL,
   `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `email` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `phone` varchar(20) COLLATE utf8mb4_unicode_ci NOT NULL,
   `date_time` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
   `status` varchar(10) COLLATE utf8mb4_unicode_ci NOT NULL
@@ -40,10 +39,10 @@ CREATE TABLE `leads` (
 -- Dumping data for table `leads`
 --
 
-INSERT INTO `leads` (`id`, `name`, `email`, `phone`, `date_time`, `status`) VALUES
-(1, 'Tauhid Hasan', 'm.tah69@gmail.com', '01677163339', '', 'old'),
-(2, 'Tauhid Hasan', 'm.tah69@gmail.com', '01677163339', '', 'new'),
-(3, 'Tauhid Hasan', 'm.tah69@gmail.com', '1677163336', '7th June 2021', 'old');
+INSERT INTO `leads` (`id`, `name`, `phone`, `date_time`, `status`) VALUES
+(1, 'Tauhid Hasan', '01677163339', '', 'old'),
+(2, 'Tauhid Hasan', '01677163339', '', 'new'),
+(3, 'Tauhid Hasan', '1677163336', '7th June 2021', 'old');
 
 -- --------------------------------------------------------
 
@@ -63,7 +62,7 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`id`, `name`, `email`, `password`) VALUES
-(1, 'Admin 1', 'clickadmin@mail.com', '12345');
+(1, 'Admin', 'clickadmin@mail.com', '12345');
 
 --
 -- Indexes for dumped tables
