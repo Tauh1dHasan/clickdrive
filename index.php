@@ -73,7 +73,7 @@
 
 
 									<img class="logo-banner" src="images/logoWhite.svg" alt="clickdrive logo" style="width: 130px;">
-									<h1 style="font-size: 3.3em">Get your <span><img src="images/BG_less_dutch.png" style="display: inline;"></span> Driver's license</h1>
+									<h1 style="font-size: 3.3em">Get your <span><img src="images/DUTCH.png" style="display: inline; width: 25%;"></span> driver's license</h1>
 									<div class="description">
 										<h3 style="font-weight: 500;">Please leave your phone number and we will call you back</h3>
 										
@@ -158,6 +158,7 @@
 
 								<div class="text-center" style="padding-bottom: 3em;">
 									<h2 style="font-size: 3em;">Our services</h2>
+									<h3>We'll help you..</h3>
 								</div>
 								
 								<div class="col-md-6">
@@ -188,7 +189,7 @@
 									<div class="box-info mb-md-50">
 										<div class="box-icon icon x2 colorful-icon mr-20"><i class="fa fa-check-circle"></i></div>
 										<div class="box-content">
-											<h4>Plan your throry exam</h4>
+											<h4>Plan your theory exam</h4>
 											
 										</div><!-- .box-content end -->
 									</div><!-- .box-info end -->
@@ -242,7 +243,7 @@
 					<div class="section-content">
 
 						<div class="container">
-							<h2 class="text-center" style="font-size: 2em; padding-bottom: 20px;">We provide customer service with a smile</h2>
+							<h2 class="text-center" style="font-size: 2em; padding-bottom: 20px;">Before you know it, you will be cruising the Dutch highway (with confidence)!</h2>
 							<div class="row">
 
 								<!-- <div class="text-center col-md-12 col-sm-12" style="padding-bottom: 3em;">
@@ -327,9 +328,16 @@
 					
 					<div class="section-content">
 
-						<div class="container">
+						<!-- <div class="container"> -->
 							<div class="row">
-								<div class="col-md-8 col-md-offset-2 text-center">
+								<!-- <div class="col-md-8 col-md-offset-2 text-center"> -->
+
+								
+								<div class="col-md-2 col-sm-12">
+									<img src="images/Sedan.png" style="    max-width: 1000px !important; margin-left: -96%;">
+								</div>
+
+								<div class="col-md-8 col-sm-12 text-center">
 
 									<h1>Contact</h1>
 									
@@ -360,9 +368,12 @@
 									</a>
 									
 
-								</div><!-- .col-md-8 end -->
+								</div><!-- .col-md-4 end -->
+
+								<div class="col-md-2 col-sm-12"></div>
+
 							</div><!-- .row end -->
-						</div><!-- .container end -->
+						<!-- </div>.container end -->
 
 					</div><!-- .section-content end -->
 
